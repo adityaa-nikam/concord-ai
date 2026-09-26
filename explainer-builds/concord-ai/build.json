@@ -1,0 +1,23 @@
+{
+  "repo": {
+    "url": "https://github.com/adityaa-nikam/concord-ai",
+    "owner": "adityaa-nikam",
+    "name": "concord-ai",
+    "slug": "concord-ai",
+    "private": false,
+    "defaultBranch": "main",
+    "clonePath": "C:\\Users\\adiit\\Desktop\\concord-ai\\explainer-builds\\concord-ai\\repo",
+    "reachable": true,
+    "author": {
+      "login": "adityaa-nikam",
+      "name": "aditya nikam",
+      "type": "User",
+      "bio": "learning\r\n",
+      "company": null,
+      "blog": null,
+      "twitter": "adityaa_nikam",
+      "followers": 14
+    }
+  },
+  "buildId": "a14e2957-fb11-41b9-bc16-53d931aacb04"
+}
