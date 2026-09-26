@@ -33,6 +33,7 @@ export default function EscalationsPage() {
 
   useEffect(() => {
     loadEscalations();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleManualReversal = async (c: CaseDetail) => {

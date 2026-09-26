@@ -6,6 +6,9 @@ import { Header } from '@/components/Header';
 export const metadata = {
   title: 'CONCORD-AI - Autonomous Exception Resolution Teammate',
   description: 'Paytm Autonomous AI Teammate for UPI Dispute & Failed Payment Exception Resolution',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

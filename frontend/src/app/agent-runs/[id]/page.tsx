@@ -33,6 +33,7 @@ export default function AgentRunTracePage() {
 
   useEffect(() => {
     loadRun();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [runId]);
 
   if (loading) {

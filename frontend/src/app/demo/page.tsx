@@ -34,6 +34,7 @@ export default function PresentationDemoPage() {
   useEffect(() => {
     const currentSc = scenarios.find(s => s.key === activeScenarioKey) || scenarios[0];
     loadCase(currentSc.id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeScenarioKey]);
 
   const handleReset = async () => {
