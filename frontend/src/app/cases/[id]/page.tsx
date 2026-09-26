@@ -212,7 +212,7 @@ export default function CaseDetailPage() {
             The automated policy engine flagged this case for human review due to verification thresholds or ambiguous ledger telemetry.
           </p>
           <div className="pt-1 text-[11px] font-mono text-slate-600">
-            Escalation Reason: <strong className="text-slate-900">"{caseData.issue_description}"</strong>
+            Escalation Reason: <strong className="text-slate-900">&quot;{caseData.issue_description}&quot;</strong>
           </div>
         </div>
       )}
@@ -223,7 +223,7 @@ export default function CaseDetailPage() {
           Customer Incident Report
         </h2>
         <div className="bg-white border border-slate-200 rounded-md p-4 text-slate-800 text-sm leading-relaxed font-sans">
-          "{caseData.issue_description}"
+          &quot;{caseData.issue_description}&quot;
           <div className="mt-3 text-xs text-slate-400 font-mono flex items-center justify-between border-t border-slate-100 pt-2.5">
             <span>Source: Mobile App Incident System</span>
             <span>Customer UTR: {caseData.transaction.utr}</span>

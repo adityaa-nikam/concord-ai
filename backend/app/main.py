@@ -45,3 +45,14 @@ app.add_middleware(
 
 app.include_router(api_router, prefix=settings.API_V1_STR)
 app.include_router(api_router)
+
+@app.get("/")
+def root():
+    return {
+        "status": "online",
+        "service": "Concord AI Backend API",
+        "version": settings.VERSION,
+        "docs_url": "/docs",
+        "health_url": "/api/health"
+    }
+

@@ -93,7 +93,7 @@ export const AgentTimeline: React.FC<AgentTimelineProps> = ({ agentRuns, auditLo
 
         {!latestRun || latestRun.tool_calls.length === 0 ? (
           <div className="p-6 text-center text-slate-400 text-xs font-mono bg-slate-50 rounded border border-slate-200">
-            No agent tool calls recorded for this case yet. Click "Run Agent" to trigger execution.
+            No agent tool calls recorded for this case yet. Click &quot;Resolve Exception&quot; to trigger execution.
           </div>
         ) : (
           <div className="space-y-3 font-mono">

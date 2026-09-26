@@ -213,7 +213,7 @@ export default function PresentationDemoPage() {
                     Customer Reported Dispute
                   </span>
                   <div className="bg-slate-50 border border-slate-200 rounded p-3.5 text-xs text-slate-800 leading-relaxed italic">
-                    "{caseData.issue_description}"
+                    &quot;{caseData.issue_description}&quot;
                   </div>
                 </div>
 

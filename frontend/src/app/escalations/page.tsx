@@ -210,7 +210,7 @@ export default function EscalationsPage() {
                                     Escalation Trigger Reason
                                   </span>
                                   <p className="text-sm font-medium text-slate-900 leading-snug">
-                                    "{item.issue_description}"
+                                    &quot;{item.issue_description}&quot;
                                   </p>
                                 </div>
 
