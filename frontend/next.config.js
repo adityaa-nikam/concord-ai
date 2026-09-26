@@ -1,3 +1,5 @@
+const backendUrl = (process.env.NEXT_PUBLIC_API_URL || 'https://concord-ai-production.up.railway.app').replace(/\/$/, '');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -5,11 +7,11 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/api/:path*`,
+        destination: `${backendUrl}/api/:path*`,
       },
       {
         source: '/health',
-        destination: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/health`,
+        destination: `${backendUrl}/api/health`,
       },
     ];
   },
