@@ -1,9 +1,18 @@
 # CONCORD-AI
 
-> **Paytm Build for India AI Hackathon — Track 3: Autonomous AI Teammates**  
-> **Product Name:** Concord-AI (Autonomous Exception Resolution Teammate for UPI Payment Failures)
+[![Deploy with Vercel](https://img.shields.io/badge/Vercel-Frontend%20Live-black?style=for-the-badge&logo=vercel)](https://concord-ai-six.vercel.app)
+[![Deploy on Railway](https://img.shields.io/badge/Railway-Backend%20Live-0B0D0E?style=for-the-badge&logo=railway)](https://concord-ai-production.up.railway.app/docs)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+[![Mistral AI](https://img.shields.io/badge/Mistral_AI-Enabled-FF7000?style=for-the-badge)](https://mistral.ai)
+[![Tests](https://img.shields.io/badge/Tests-65%20Passed-emerald?style=for-the-badge)](https://github.com/adityaa-nikam/concord-ai)
 
-Concord-AI is a **Hybrid Autonomous AI Teammate** designed to resolve ambiguous UPI payment exceptions (e.g. *"₹2,400 was debited from my account, but the beneficiary didn't receive the money"*).
+> **Paytm Build for India AI Hackathon — Track 3: Autonomous AI Teammates**  
+> **Product Name:** Concord-AI (Autonomous Exception Resolution Teammate for UPI Payment Failures)  
+> **Live Demo**: [https://concord-ai-six.vercel.app](https://concord-ai-six.vercel.app) | **API Docs**: [https://concord-ai-production.up.railway.app/docs](https://concord-ai-production.up.railway.app/docs)
+
+Concord-AI is an **Autonomous Payment Operations Workstation & AI Teammate** designed to resolve ambiguous UPI payment exceptions (e.g. *"₹2,400 was debited from my account, but the beneficiary didn't receive the money"*).
 
 Instead of relying solely on static status checking or unconstrained LLMs, Concord-AI combines **LLM natural language & multi-system evidence interpretation** with **deterministic RBI Policy Gates and Action Idempotency Guardrails**.
 
