@@ -43,14 +43,22 @@ class LLMProvider:
     def get_provider_name(cls) -> str:
         prov = os.getenv("LLM_PROVIDER", getattr(settings, "LLM_PROVIDER", "mistral")).lower()
         key = cls.get_api_key()
-        if key and key.startswith("mstrl_"):
-            return "mistral"
+        if key:
+            if key.startswith("mstrl_"):
+                return "mistral"
+            if key.startswith("gsk_"):
+                return "groq"
         return prov
 
     @classmethod
     def get_model_name(cls) -> str:
         prov = cls.get_provider_name()
-        default_model = "mistral-small-latest" if prov == "mistral" else "gpt-4o"
+        if prov == "groq":
+            default_model = "llama-3.3-70b-versatile"
+        elif prov == "mistral":
+            default_model = "mistral-small-latest"
+        else:
+            default_model = "gpt-4o"
         return os.getenv("LLM_MODEL", getattr(settings, "LLM_MODEL", default_model))
 
     @classmethod
@@ -58,6 +66,7 @@ class LLMProvider:
         key = (
             os.getenv("MISTRAL_API_KEY") or
             getattr(settings, "MISTRAL_API_KEY", None) or
+            os.getenv("GROQ_API_KEY") or
             os.getenv("OPENAI_API_KEY") or
             getattr(settings, "OPENAI_API_KEY", None) or
             os.getenv("ANTHROPIC_API_KEY") or
@@ -73,7 +82,7 @@ class LLMProvider:
     def is_live_mode(cls) -> bool:
         provider = cls.get_provider_name()
         api_key = cls.get_api_key()
-        return provider in ["mistral", "openai", "gemini", "anthropic", "openrouter"] and bool(api_key)
+        return provider in ["mistral", "groq", "openai", "gemini", "anthropic", "openrouter"] and bool(api_key)
 
 
     # =========================================================
@@ -311,7 +320,9 @@ class LLMProvider:
         model = cls.get_model_name()
         provider = cls.get_provider_name()
 
-        if provider == "mistral" or (api_key and api_key.startswith("mstrl_")):
+        if provider == "groq" or (api_key and api_key.startswith("gsk_")):
+            url = "https://api.groq.com/openai/v1/chat/completions"
+        elif provider == "mistral" or (api_key and api_key.startswith("mstrl_")):
             url = "https://api.mistral.ai/v1/chat/completions"
         else:
             url = "https://api.openai.com/v1/chat/completions"
